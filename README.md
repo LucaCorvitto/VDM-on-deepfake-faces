@@ -1,11 +1,11 @@
-# The more attractive the more real? Cognitive processes involved in deepfake detection in young and older adults
-This repository contains the code and the process description of the generation of the synthetic photorealistic images used in the paper. The overview of all the info about the prompts and the model can be found in [info.xlsx](https://github.com/LucaCorvitto/TheMoreAttractive_TheMoreReal/blob/main/info.xlsx).
+# Does the valence-dominance model apply to deepfake faces? Validation and its impact on deepfake detection
+This repository contains the code and the process description of the generation of the synthetic photorealistic images used in the paper. The overview of all the info about the prompts and the model can be found in [info.xlsx](https://github.com/LucaCorvitto/VDM-on-deepfake-faces/blob/main/info.xlsx).
 
 ## Abstract
-Previous work had demonstrated the difficulty of humans to reliably distinguish between real and deepfake (i.e., created by artificial-intelligence) face stimuli. Given its important forensic implications including identity thefts, political misinformation, or fraud research in cognitive sciences has started to focus on face characteristics and cognitive mechanisms impacting deepfake detection accuracy. The perceived attractiveness of faces has been found to possibly facilitate deepfake detection (e.g., Miller et al., 2023). As particularly older adults are a vulnerable target group in the context of online frauds and misinformation susceptibility, the present study investigates, for the first time, whether subjectively perceived face attractiveness is associated with deepfake face detection in a sample of older (N = 37) and younger (N = 35) adults. Both groups of participants categorized 120 faces (50 % real, 50 % deepfake) as real or deepfake, followed by an attractiveness rating of each evaluated face. Both accuracy and response times were measured. Results confirm a lower detection accuracy in older adults. Moreover, perceived face attractiveness increased detection accuracy of real faces and decreased detection accuracy of deepfake faces, in both young and older adults. Finally, results on response times revealed that participants were slower to categorize real faces alongside increasingly attractive faces, suggesting the activation of more systematic decision making processes. These results provide the first preliminary insight into the cognitive processes, related to attractiveness and response times, involved in static deepfake face detection, in both young and older adults, and may provide a first step in the development of interventions and awareness campaigns tailored to different age groups.
+Artificial Intelligence has given rise to increasingly more realistic fake contents such as deepfake faces, hardly distinguishable from real faces. However, evidence has shown that social evaluations of real faces are also able to impact the detection of deepfake faces. The present study aimed at applying for the first time the valence-dominance model for face evaluation on deepfake faces. Moreover, the impact of its thirteen attributes on deepfake detection performances was investigated. Specifically, 311 participants categorised 120 faces (50% real, 50% deepfake created ad hoc by Diffusion Model technology) and rated faces in regards to one of the attributes. Principal Component Analysis was applied in order to validate the valence-dominance model on deepfake faces, and a Brunwskian lens model was  applied to understand how each attribute contributes to a face being judged as deepfake. Results replicated the valence-dominance model on real faces as well as on faces categorized by participants as deepfake, but not on actual deepfake faces. Finally, the Brunwskian model revealed caringness and intelligence to impair detection of deepfake stimuli whilst weirdness was revealed to be a positive predictor, being positively associated with higher detection accuracy. Our results shed, for the first time, light into the differential cognitive processing of deepfake faces and their social evaluation whilst also providing novel insight into underlying mechanisms associated with deepfake detection. Interdisciplinary implications regarding the theoretical and applied contribution are discussed.
 
 ## Images
-The generated deepfakes dataset is available on [Huggingface](https://huggingface.co/datasets/LucaCorvitto/TheMoreAttractive_TheMoreReal). The dataset was created using the prompts inside the [`prompts.txt`](https://github.com/LucaCorvitto/TheMoreAttractive_TheMoreReal/blob/main/prompts.txt) file. Each image's file name is structured in this way:
+The generated deepfakes dataset is available on [HuggingFace](https://huggingface.co/datasets/LucaCorvitto/DeepFake-Faces-Stimuli). The dataset was created using the prompts inside the [`prompts.txt`](https://github.com/LucaCorvitto/VDM-on-deepfake-faces/blob/main/prompts.txt) file. Each image's file name is structured in this way:
 ```
 <#gpu>-<#prompt>-<#process>.png
 ```
@@ -31,8 +31,8 @@ Here follows a set of samples of the images generated and then manually edited f
     <tr>
       <td>0-10-6</td>
       <td>ID photo for passport, a portrait photo of a white man with short hair, frontal view, natural skin, 8k uhd, high quality, film grain, Fujifilm XT3, white background</td>
-      <td><img src="https://github.com/LucaCorvitto/TheMoreAttractive_TheMoreReal/blob/main/sample_images/0-10-6.png?raw=true" width="150"></td>
-      <td><img src="https://github.com/LucaCorvitto/TheMoreAttractive_TheMoreReal/blob/main/sample_images/0-10-6-edited.png?raw=true" width="150"></td>
+      <td><img src="https://github.com/LucaCorvitto/VDM-on-deepfake-faces/blob/main/sample_images/0-10-6.png?raw=true" width="150"></td>
+      <td><img src="https://github.com/LucaCorvitto/VDM-on-deepfake-faces/blob/main/sample_images/0-10-6-edited.png?raw=true" width="150"></td>
     </tr>
     <tr>
       <td>...<img width="100" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></td>
@@ -43,8 +43,8 @@ Here follows a set of samples of the images generated and then manually edited f
     <tr>
       <td>0-13-3</td>
       <td>ID photo for passport, a portrait photo of a white man with short black hair, frontal view, natural skin, 8k uhd, high quality, film grain, Fujifilm XT3, white background</td>
-      <td><img src="https://github.com/LucaCorvitto/TheMoreAttractive_TheMoreReal/blob/main/sample_images/0-13-3.png?raw=true" width="150"></td>
-      <td><img src="https://github.com/LucaCorvitto/TheMoreAttractive_TheMoreReal/blob/main/sample_images/0-13-3-edited.png?raw=true" width="150"></td>
+      <td><img src="https://github.com/LucaCorvitto/VDM-on-deepfake-faces/blob/main/sample_images/0-13-3.png?raw=true" width="150"></td>
+      <td><img src="https://github.com/LucaCorvitto/VDM-on-deepfake-faces/blob/main/sample_images/0-13-3-edited.png?raw=true" width="150"></td>
     </tr>
     <tr>
       <td>...<img width="100" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></td>
@@ -55,8 +55,8 @@ Here follows a set of samples of the images generated and then manually edited f
     <tr>
       <td>0-23-2</td>
       <td>ID photo for passport, a portrait photo of an adult white woman with tied hair, frontal view, black eyes, natural skin, 8k uhd, high quality, film grain, Fujifilm XT3, white background</td>
-      <td><img src="https://github.com/LucaCorvitto/TheMoreAttractive_TheMoreReal/blob/main/sample_images/0-23-2.png?raw=true" width="150"></td>
-      <td><img src="https://github.com/LucaCorvitto/TheMoreAttractive_TheMoreReal/blob/main/sample_images/0-23-2-edited.png?raw=true" width="150"></td>
+      <td><img src="https://github.com/LucaCorvitto/VDM-on-deepfake-faces/blob/main/sample_images/0-23-2.png?raw=true" width="150"></td>
+      <td><img src="https://github.com/LucaCorvitto/VDM-on-deepfake-faces/blob/main/sample_images/0-23-2-edited.png?raw=true" width="150"></td>
     </tr>
     <tr>
       <td>...<img width="100" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></td>
@@ -67,13 +67,11 @@ Here follows a set of samples of the images generated and then manually edited f
     <tr>
       <td>0-34-19</td>
       <td>ID photo for passport, a portrait photo of an adult white woman with tied hair, frontal view, natural skin, 8k uhd, high quality, film grain, Fujifilm XT3, white background</td>
-      <td><img src="https://github.com/LucaCorvitto/TheMoreAttractive_TheMoreReal/blob/main/sample_images/0-34-19.png?raw=true" width="150"></td>
-      <td><img src="https://github.com/LucaCorvitto/TheMoreAttractive_TheMoreReal/blob/main/sample_images/0-34-19-edited.png?raw=true" width="150"></td>
+      <td><img src="https://github.com/LucaCorvitto/VDM-on-deepfake-faces/blob/main/sample_images/0-34-19.png?raw=true" width="150"></td>
+      <td><img src="https://github.com/LucaCorvitto/VDM-on-deepfake-faces/blob/main/sample_images/0-34-19-edited.png?raw=true" width="150"></td>
     </tr>
   </tbody>
 </table>
-
-The final set of selected stimuli and other related information can be found on the official [OSF repo](https://osf.io/jnes3/overview?view_only=85e21df5286f4556ab228c9ed04ab59c).
 
 ## Prompts
 The prompts slightly vary from each other in order to create diversified images, each one focused on a different detail, but the base is as follows:
@@ -92,7 +90,7 @@ The prompt is then further enhanced with additional descriptions to promote outp
 - **Ponytail hair** / **without hair on forehead** (for female faces as generally tied hair alone was not enough to achieve the desired output)
 - **Adult** (as the model had a bias towards generating images of young faces)
 
-Follows an example of an enriched phrase (the complete list can be found [here](https://github.com/LucaCorvitto/TheMoreAttractive_TheMoreReal/blob/main/prompts.txt)):
+Follows an example of an enriched phrase (the complete list can be found [here](https://github.com/LucaCorvitto/VDM-on-deepfake-faces/blob/main/prompts.txt)):
 
 **"ID photo for passport, a portrait photo of an adult white woman with brown tied hair, frontal view, natural skin, 8k UHD, high quality, film grain, Fujifilm XT3, white background, ponytail hair"**
 
@@ -110,7 +108,7 @@ After several attempts, the best additions were:
 - **Ponytail hair** (for women, the addition of *frontal view* was necessary in combination with this modifier as most reference images were side-view photos focusing on the mane rather than the face)
 
 ## Negative Prompt
-Another important aspect is the *negative prompt*. It is used in these models to give negative weights to characteristics that one wants to *avoid* appearing in the final image. This provides more control, specifically indicating what is wanted and what is not. The negative prompt used, also provided in [info.xlsx](https://github.com/LucaCorvitto/TheMoreAttractive_TheMoreReal/blob/main/info.xlsx), is as follows:
+Another important aspect is the *negative prompt*. It is used in these models to give negative weights to characteristics that one wants to *avoid* appearing in the final image. This provides more control, specifically indicating what is wanted and what is not. The negative prompt used, also provided in [info.xlsx](https://github.com/LucaCorvitto/VDM-on-deepfake-faces/blob/main/info.xlsx), is as follows:
 
 **"nude, naked, fake, deformed iris, deformed pupils, bangs haircut, loose hair, profile picture, profile, three quarter view, 3d art, poor detail, Accessories, beard, dyed hair, colorful background, person of color, colored skin"**
 
@@ -124,4 +122,4 @@ Specifically, the number of inference steps in the generation process and the wi
 - the **height** of the images was increased to obtain an aspect ratio similar to that used for ID/portrait half body photos
 - the **guidance scale** was reduced to ensure a greater variation of faces, trying to keep it high enough to avoid the model ignoring important details specified in the prompt
 
-The actual values are provided in [info.xlsx](https://github.com/LucaCorvitto/TheMoreAttractive_TheMoreReal/blob/main/info.xlsx) and already set in the [script](https://github.com/LucaCorvitto/TheMoreAttractive_TheMoreReal/blob/main/main.py).
+The actual values are provided in [info.xlsx](https://github.com/LucaCorvitto/VDM-on-deepfake-faces/blob/main/info.xlsx) and already set in the [script](https://github.com/LucaCorvitto/VDM-on-deepfake-faces/blob/main/main.py).
